@@ -1,8 +1,8 @@
 <h1>Index</h1>
 
 <% @songs.each do |song| %>
-<%= song.title %>
-<%= link_to 'View', song %>
-<%= link_to 'Edit', edit_song_path(song) %>
-<%= button_to 'Delete', song, method: :delete, data: {confirm: "Confirm?"} %>
+  <%= song.title %>
+  <%= link_to 'View', song %>
+  <%= link_to 'Edit', edit_song_path(song) %>
+  <%= button_to 'Delete', song, method: :delete, data: {confirm: "Confirm?"} %>
 <% end %>
