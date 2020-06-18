@@ -23,8 +23,11 @@ class SongsController < ApplicationController
   end
 
   def update
-    @song.update(song_params)
-    redirect_to song_path(@song)
+    if @song.update(song_params)
+      redirect_to song_path(@song)
+    else
+      render :edit
+    end
   end
 
   private
