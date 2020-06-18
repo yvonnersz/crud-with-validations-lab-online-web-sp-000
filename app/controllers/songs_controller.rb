@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  # before_action :set_song, only:
+  before_action :set_song, only: [:show]
 
   def new
     @song = Song.new
